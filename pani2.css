@@ -1,0 +1,34 @@
+.vertical-line{
+
+    
+        border-left: 2px solid #000;
+        display: inline-block;
+        height: 30px;
+        margin: 0 20px;
+      
+}
+#cc{
+    height:50px;
+}
+nav ul li
+{
+ margin:0 10px; 
+}
+#hh {
+    vertical-align: middle;
+    margin: -12px;}
+.d-flex{
+    margin-right: 551px;
+}
+.sll{
+    position: absolute;
+    top: 405px;
+    margin-left: -1185px;
+}
+.ik{
+    border:0rem solid;
+    
+}
+.container2{
+  background-color: rgb(218, 229, 250);
+}
