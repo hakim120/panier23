@@ -22,7 +22,7 @@
     <title>e-commerce</title>
     <link rel="stylesheet" href="pani2.css" type="text/css">
 
-    <script src="pani1.js"></script>
+    <script src="pani1.js" defer></script>
   </head>
 
 
@@ -60,12 +60,8 @@
               <input class="form-control  " type="search" placeholder="Search" aria-label="Search">
              
             </form>
-              <li class="nav-item m ">
-                <a class="nav-link active me-5" aria-current="page" href="#"><img id ="hh" src="https://img.icons8.com/pastel-glyph/64/000000/fast-cart.png"/></a>
-              </li>
-                <li class="nav-item  ">
-                  <a class="nav-link active me-5" aria-current="page" href="#"><img id ="hh" src="https://img.icons8.com/ios-filled/50/000000/admin-settings-male.png"/></a>
-                </li>
+                <a class="nav-link active me-5" aria-current="page" href="#"><span class="fa-stack fa-5x has-badge" id="dataCount"><i class="fas fa-shopping-cart"></i></span></a>
+           
             
          
           </div>
@@ -127,7 +123,9 @@
           <h5 class="card-title">Name product</h5>
          
           <p class="card-text">name product and price.</p>
-          <a href="#" class="btn btn-primary">add to chart</a>
+          <button type="button" class="btn btn-primary addCart" id='addTriko'>add to chart</button>
+
+          <!-- <a href="#" class="btn btn-primary"></a> -->
         </div>
       </div>
     </div>
@@ -137,7 +135,7 @@
         <div class="card-body">
           <h5 class="card-title">Name product</h5>
           <p class="card-text">name product and product</p>
-          <a href="#" class="btn btn-primary">add to chart</a>
+          <button type="button" class="btn btn-primary addCart" id='addSpadri'>add to chart</button>
         </div>
       </div>
     </div>
@@ -146,8 +144,8 @@
         <img src="short.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Name product</h5>
-          <p class="card-text">name and product.</p>
-          <a href="#" class="btn btn-primary">add to chart</a>
+          <p class="card-text">120   1stock.</p>
+          <button type="button" class="btn btn-primary addCart" id='addShort'>add to chart</button>
         </div>
       </div>
     </div>
@@ -156,19 +154,18 @@
 </div>
 </div>
 <br></br>
-<table class="table py-5">
+<table class="table py-5" id="mytable">
   <thead>
     <tr>
       <th scope="col">item</th>
-      <th scope="col">size</th>
       <th scope="col">Quantity</th>
       <th scope="col">Price</th>
       <th scope="col">Remove</th>
       <th scope="col">total</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
+  <tbody class="tbody" id="tbody">
+    <!-- <tr>
       <th scope="row"><img src="triko.jpg"></th>
       <td><select><option>10</option></th>
         <option>20</option>
@@ -189,7 +186,7 @@
       <td>230dt</td>
       <td><button>remove</button></td>
       <td>460</td>
-    </tr>
+    </tr>  -->
    
   </tbody>
 </table>

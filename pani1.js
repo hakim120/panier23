@@ -1,12 +1,142 @@
-let carts= document.querySelectorAll('.add to cart');
-for(i=0;i<carts.length;i++)
-{
-charts[i].addEventListener('click', () =>{
-    console.log("added to cart");
-})
+// let carts= document.querySelectorAll('.addCart');
+// for(i=0;i<carts.length;i++)
+// {
+// carts[i].addEventListener('click', () =>{
+//     console.log("added to cart");
+// })
+
+// }
+{/* <tr>
+      <th scope="row"><img src="triko.jpg"></th>
+      <td><select><option>10</option></th>
+        <option>20</option>
+      <option>30</option>
+    </select></td>
+      <td>+1</td>
+      <td>230dt</td>
+      <td><button>remove</button></td>
+      <td>460</td>
+    </tr> */}
+
+
+var tablebody=document.createElement("tbody")
+var trikoNumber=0;
+var articleNumber=0;
+var spadriNumber=0;
+var shortNumber=0;
+
+
+var addSpadri = document.getElementById("addSpadri");
+addSpadri.addEventListener("click",handlerClickAddSpadri) 
+function handlerClickAddSpadri(e){
+  spadriNumber++;
+    document.getElementById("dataCount").setAttribute("data-count",++articleNumber);
+    console.log("Event Add spadri",e)
+    if(spadriNumber === 1){
+        var tr= document.createElement("tr");
+        var th = document.createElement("th");
+        th.setAttribute("scope","row");
+        var img = document.createElement("img")
+        img.setAttribute("src","spadri.jpg");
+        th.appendChild(img);
+        var td1 = document.createElement("td");
+        td1.setAttribute("id","spadriquantity");
+        td1.innerHTML=spadriNumber;
+        tr.appendChild(th);
+        tr.appendChild(td1);
+        document.getElementById("tbody").appendChild(tr);
+        var td4 = document.createElement("td");
+        
+        td4.innerHTML=400;
+        tr.appendChild(td4);
+        var td5=document.createElement("td");
+var button = document.createElement("button");
+button.innerHTML="Remove";
+td5.appendChild(button);
+tr.appendChild(td5);
+        
+        }
+        document.getElementById("spadriquantity").innerHTML=spadriNumber;
+    
+}
+var addShort = document.getElementById("addShort");
+addShort.addEventListener("click",handlerClickAddShort) 
+function handlerClickAddShort(e){
+  ++shortNumber;
+    document.getElementById("dataCount").setAttribute("data-count",++articleNumber);
+    console.log("Event Add Short",e)
+    if(shortNumber === 1){
+        var tr= document.createElement("tr");
+        var th = document.createElement("th");
+        th.setAttribute("scope","row");
+        var img = document.createElement("img")
+        img.setAttribute("src","short.jpg");
+        th.appendChild(img);
+        var td1 = document.createElement("td");
+        td1.setAttribute("id","shortquantity");
+        td1.innerHTML=shortNumber;
+        tr.appendChild(th);
+        tr.appendChild(td1);
+        document.getElementById("tbody").appendChild(tr);
+        var td3 = document.createElement("td");
+td3.setAttribute("Price","400");
+td3.innerHTML=400;
+tr.appendChild(td3);
+var td6=document.createElement("td");
+var button = document.createElement("button");
+button.innerHTML="Remove";
+td6.appendChild(button);
+tr.appendChild(td6);
+        
+        }
+        document.getElementById("shortquantity").innerHTML=shortNumber;
+    }
+
+var addTriko = document.getElementById("addTriko");
+addTriko.addEventListener("click",handlerClickAddTriko) 
+function handlerClickAddTriko(e){
+    ++trikoNumber;
+    document.getElementById("dataCount").setAttribute("data-count",++articleNumber);
+console.log(trikoNumber)
+if(trikoNumber === 1){
+var tr= document.createElement("tr");
+var th = document.createElement("th");
+th.setAttribute("scope","row");
+var img = document.createElement("img")
+img.setAttribute("src","triko.jpg");
+th.appendChild(img);
+var td1 = document.createElement("td");
+td1.setAttribute("id","trikoquantity");
+td1.innerHTML=trikoNumber;
+tr.appendChild(th);
+tr.appendChild(td1);
+var td2 = document.createElement("td");
+td2.innerHTML=250;
+tr.appendChild(td2);
+var td3=document.createElement("td");
+var button = document.createElement("button");
+button.innerHTML="Remove";
+td3.appendChild(button);
+tr.appendChild(td3);
+document.getElementById("tbody").appendChild(tr);
+
+
 
 }
-function cartnNmber (){
-    let productNumber = localStorage.getItem('cartNumber');
-localStorage.setItem('cartNum',  1  );
+document.getElementById("trikoquantity").innerHTML=trikoNumber;
+ 
 }
+
+var somme=("trikoNumber*250"+"shortNumber*400"+"spadriNumber*400");
+var td7=document.createElement("td");
+td7.setAttribute("id","somme");
+td7.innerHTML=somme;
+tr.appendChild(td7);
+
+///function handlerClickAddShort(e){
+//document.getElementById("table").setAttribute("table","mytable");
+//console.log("table");}
+
+
+
+
