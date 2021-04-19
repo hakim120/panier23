@@ -24,7 +24,7 @@ var trikoNumber=0;
 var articleNumber=0;
 var spadriNumber=0;
 var shortNumber=0;
-
+var somme=0;
 
 var addSpadri = document.getElementById("addSpadri");
 addSpadri.addEventListener("click",handlerClickAddSpadri) 
@@ -49,6 +49,11 @@ function handlerClickAddSpadri(e){
         
         td4.innerHTML=400;
         tr.appendChild(td4);
+        var  td10=document.createElement("td");
+        td10.setAttribute("id","spadriyTotal");
+        tr.appendChild(td10);
+
+        td10.innerHTML=400;
         var td5=document.createElement("td");
 var button = document.createElement("button");
 button.innerHTML="Remove";
@@ -57,7 +62,10 @@ tr.appendChild(td5);
         
         }
         document.getElementById("spadriquantity").innerHTML=spadriNumber;
-    
+        document.getElementById("spadriyTotal").innerHTML=somme+(spadriNumber*400);
+
+   
+
 }
 var addShort = document.getElementById("addShort");
 addShort.addEventListener("click",handlerClickAddShort) 
@@ -82,14 +90,22 @@ function handlerClickAddShort(e){
 td3.setAttribute("Price","400");
 td3.innerHTML=400;
 tr.appendChild(td3);
-var td6=document.createElement("td");
+var  td11=document.createElement("td");
+        td11.setAttribute("id","shortiyTotal");
+        
+        tr.appendChild(td11);
+
+        td10.innerHTML=400;
+        var td3=document.createElement("td");
 var button = document.createElement("button");
 button.innerHTML="Remove";
-td6.appendChild(button);
-tr.appendChild(td6);
+td3.appendChild(button);
+tr.appendChild(td3);
+document.getElementById("tbody").appendChild(tr);
         
         }
         document.getElementById("shortquantity").innerHTML=shortNumber;
+        document.getElementById("shortiyTotal").innerHTML=somme+(shortNumber*400);
     }
 
 var addTriko = document.getElementById("addTriko");
@@ -113,25 +129,29 @@ tr.appendChild(td1);
 var td2 = document.createElement("td");
 td2.innerHTML=250;
 tr.appendChild(td2);
+var  td12=document.createElement("td");
+        td12.setAttribute("id","trikoyTotal");
+        tr.appendChild(td12);
 var td3=document.createElement("td");
 var button = document.createElement("button");
 button.innerHTML="Remove";
 td3.appendChild(button);
 tr.appendChild(td3);
 document.getElementById("tbody").appendChild(tr);
+///var somme=("trikoNumber*250"+"shortNumber*400"+"spadriNumber*400");
 
 
 
 }
 document.getElementById("trikoquantity").innerHTML=trikoNumber;
- 
+document.getElementById("trikoyTotal").innerHTML=somme+(trikoNumber*400);
 }
 
-var somme=("trikoNumber*250"+"shortNumber*400"+"spadriNumber*400");
-var td7=document.createElement("td");
-td7.setAttribute("id","somme");
-td7.innerHTML=somme;
-tr.appendChild(td7);
+//var somme=("trikoNumber*250"+"shortNumber*400"+"spadriNumber*400");
+//var td7=document.createElement("td");
+//td7.setAttribute("id","somme");
+//td7.innerHTML=somme;
+//tr.appendChild(td7);
 
 ///function handlerClickAddShort(e){
 //document.getElementById("table").setAttribute("table","mytable");
